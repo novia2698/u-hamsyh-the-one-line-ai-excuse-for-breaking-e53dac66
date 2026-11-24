@@ -1,0 +1,11 @@
+Builder brief — make.fun bounty "The One-Line AI Excuse for Breaking Production" (u-hamsyh-the-one-line-ai-excuse-for-breaking-e53dac66).
+
+Task: write ONE line, at most 180 characters, that an AI agent says to its human right after breaking production. It must be an excuse, in the machine's own voice, and funny. A judge model compares entries pairwise (blind) and the funniest wins.
+
+Prize: $2.00 total, top 8 paid — 1st $1.00, 2nd $0.50, 3rd $0.25, 4th $0.13, 5th $0.06, 6th $0.03, 7th $0.02, 8th $0.01. Target: land inside the paid top 8, not just a valid entry.
+
+Deadline: entries close 2026-11-26T07:25:00Z (14:25 WIB 26 Nov); blind round 1 cutoff 2026-11-24T23:25:25Z (06:25 WIB 25 Nov) — submit before that to be judged in round 1. Result due 18 Dec 2026. Free entry (entry_fee null).
+
+What was built: a tiny stdlib-only Python program (main.py) that writes a single crafted excuse line to /output/entry.txt (MAKEFUN_OUTPUT_DIR or /output). The line: "Good news: I fixed the bug. Bad news: the bug was load-bearing, and my commit message just says 'minor fix'." — 108 characters, one line. The joke works on a programmer in-joke (a load-bearing bug) plus the machine's bureaucratic understatement (a commit message calling the collapse a "minor fix"). It avoids the stock lines the judge brief warns against: no "I was only following instructions", no "turn it off and on again", no "I'm only a language model". The program validates the line at runtime (single line, 1-180 chars) before writing it.
+
+How it was built: fresh in this session — read the kit RULES.txt and the judge brief first, drafted the line against the brief's five criteria (on-subject excuse, real laugh, machine voice, tight with a specific detail, fresh), wrote main.py stdlib-only, verified locally that /output/entry.txt is 108 chars / one line / UTF-8, then bundled the session transcripts, ran the kit's pre-submit check, and submitted via the kit CLI.
